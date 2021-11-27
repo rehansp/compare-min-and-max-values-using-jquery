@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src = "jquery.min.js"></script>
+    <script src = "jquery.validate.js"></script>
+  </head>
+  <body>
+    <form method = "post" id = "myform">
+      <div class = "row">
+        <div class = "col-md-2">
+          <label for="">Purchase Rate :</label>
+        </div>
+        <div class = "col-md-4">
+          <input type="text" id = "PurchaseRate" placeholder="Purchase Rate" name = "PurchaseRate"></input>
+        </div>
+        <div class = "col-md-2">
+          <label for="">ProcTimeMin :</label>
+        </div>
+        <div class = "col-md-4">
+          <input type="text" id = "ProcTimeMin" placeholder="Purchase Rate" name = "ProcTimeMin"></input>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-md-2">
+          <label for="">ExternalCode :</label>
+        </div>
+        <div class = "col-md-4">
+          <input type="text" id = "ExternalCode" placeholder="Purchase Rate" name = "ExternalCode"></input>
+        </div>
+        <div class = "col-md-2">
+           <label for="">Item Detais :</label>
+        </div>
+        <div class = "col-md-4">
+           <input type="text" id = "ItemDetais" placeholder="Purchase Rate" name = "ItemDetais"></input>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-md-2">
+          <label for="txtbalance">MaxVal</label>
+        </div>
+        <div class = "col-md-4">
+           <input id="maxval" type="text" name = "maxval"></input>
+        </div>
+        <div class = "col-md-2">
+          <label for="txtdays">MinVal</label>
+        </div>
+        <div class = "col-md-4">
+          <input id="minval" type="text" name = "minval"></input>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-md-2">
+          <label for="">Area Code :</label>
+        </div>
+        <div class = "col-md-10">
+          <select name="AreaCode" id="AreaCode">
+            <option value = "">Please select an option from list</option>
+            <option value = "213">213</option>
+            <option value = "214">214</option>
+            <option value = "215">215</option>
+          </select>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class = "col-md-12">
+          <input type="submit" value = "submit" class ="btn btn-primary mt-3" id = "submit_btn">
+        </div>
+      </div>
+    </form>
+    <!-- <script>
+      $("#submit_btn").click(function () {
+    $("#myform").validate({
+        rules : {
+            PurchaseRate : {
+                required: true
+            },
+    
+            ProcTimeMin : {
+                required: true
+            },
+    
+            ExternalCode : {
+                required: true
+            },
+    
+            ItemDetais : {
+                required: true
+            },
+    
+            txtdays : {
+                required: true
+            },
+    
+           txtbalance : {
+                required: true
+            },
+    
+            AreaCode : {
+                required: true
+            },
+        },
+        messages : {
+            PurchaseRate : "This Field is required",
+            ProcTimeMin : "This Field is required",
+            ExternalCode : "This Field is required",
+            ItemDetais : "This Field is required",
+            txtdays : "This Field is required",
+            txtbalance : "This Field is required",
+            AreaCode  : "Please select an option from the list",
+        },
+        submitHandler: function(form) {
+            form.submit(alert("Thanks!"))
+        }
+    })
+    })
+    
+    </script> -->
+    <script src="script.js"></script>
+  </body>
+</html>
