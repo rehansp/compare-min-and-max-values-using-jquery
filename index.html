@@ -1,129 +1,167 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>replit</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css">
     <script src = "jquery.min.js"></script>
-    <script src = "jquery.validate.js"></script>
-  </head>
-  <body>
-    <form method = "post" id = "myform">
-      <div class = "row">
-        <div class = "col-md-2">
-          <label for="">Purchase Rate :</label>
-        </div>
-        <div class = "col-md-4">
-          <input type="text" id = "PurchaseRate" placeholder="Purchase Rate" name = "PurchaseRate"></input>
-        </div>
-        <div class = "col-md-2">
-          <label for="">ProcTimeMin :</label>
-        </div>
-        <div class = "col-md-4">
-          <input type="text" id = "ProcTimeMin" placeholder="Purchase Rate" name = "ProcTimeMin"></input>
-        </div>
-      </div>
+    <script src = "jquery.validate.min.js"></script>
+    <title>Validate Maximum and minumum values</title>
+    <script>
+            
+        // var MinVal = $('#MinLevel').val();
+        // var MaxVal = $('#MaxLevel').val();
 
-      <div class = "row">
-        <div class = "col-md-2">
-          <label for="">ExternalCode :</label>
-        </div>
-        <div class = "col-md-4">
-          <input type="text" id = "ExternalCode" placeholder="Purchase Rate" name = "ExternalCode"></input>
-        </div>
-        <div class = "col-md-2">
-           <label for="">Item Detais :</label>
-        </div>
-        <div class = "col-md-4">
-           <input type="text" id = "ItemDetais" placeholder="Purchase Rate" name = "ItemDetais"></input>
-        </div>
-      </div>
+        // if(MaxVal === "" || MinVal === "") return false;
 
-      <div class = "row">
-        <div class = "col-md-2">
-          <label for="txtbalance">MaxVal</label>
-        </div>
-        <div class = "col-md-4">
-           <input id="maxval" type="text" name = "maxval"></input>
-        </div>
-        <div class = "col-md-2">
-          <label for="txtdays">MinVal</label>
-        </div>
-        <div class = "col-md-4">
-          <input id="minval" type="text" name = "minval"></input>
-        </div>
-      </div>
+        // if (parseInt(MaxVal) < parseInt(MinVal)){
+        //     alert("Max Val should be always greater")
+        // }
 
-      <div class = "row">
-        <div class = "col-md-2">
-          <label for="">Area Code :</label>
-        </div>
-        <div class = "col-md-10">
-          <select name="AreaCode" id="AreaCode">
-            <option value = "">Please select an option from list</option>
-            <option value = "213">213</option>
-            <option value = "214">214</option>
-            <option value = "215">215</option>
-          </select>
-        </div>
-      </div>
+    </script>
+</head>
+<body>
+    <h4 class = "title mt-3" style = "color : red; text-align: center;">Validating Max & Min values</h4>
+    <div class = "container mt-4">
+        <form method = "post" class = "inline mb-4" id = "maxandmin">
+            <div class = "form-group row mb-2">
+                    <div class = "col-md-2">
+                        <label for="">Purchase Rate : </label>
+                    </div>
+                    <div class = "col-md-4">
+                        <input type="text" class = "form-control form-control-lg" placeholder="Purchase Rate" name = "PurchaseRate" id = "PurchaseRate">
+                    </div>
 
-      <div class = "row">
-        <div class = "col-md-12">
-          <input type="submit" value = "submit" class ="btn btn-primary mt-3" id = "submit_btn">
-        </div>
-      </div>
-    </form>
-    <!-- <script>
-      $("#submit_btn").click(function () {
-    $("#myform").validate({
-        rules : {
-            PurchaseRate : {
-                required: true
-            },
+                    <div class = "col-md-2">
+                        <label for="">ProcTimeMin : </label>
+                    </div>
+                    <div class = "col-md-4">
+                        <input type="text" class = "form-control form-control-lg" placeholder="ProcTimeMin" name = "ProcTimeMin" id = "ProcTimeMin"> 
+                    </div>
+            </div>
+
+            <div class = "form-group row mb-2">
+                <div class = "col-md-2">
+                    <label for="">External Code :</label>
+                </div>
+                <div class = "col-md-4">
+                    <input type="text" class = "form-control form-control-lg" placeholder="External Code" name = "ExternalCode" id = "ExternalCode">
+                </div>
+
+                <div class = "col-md-2">
+                    <label for="">Item Details : </label>
+                </div>
+                <div class = "col-md-4">
+                    <input type="text" class = "form-control form-control-lg" placeholder="Item Detais" name = "ItemDetais" id = "ItemDetais">
+                </div>
+            </div>
+
+            <div class = "form-group row mb-2">
+
+                <div class = "col-md-2">
+                    <label for="">Max Level : </label>
+                </div>
+                <div class = "col-md-4">
+                    <input type="text" class = "form-control form-control-lg max" placeholder="Max Level" name = "MaxLevel" id = "MaxLevel">
+                </div>
+
+                <div class = "col-md-2">
+                    <label for="">Min Level : </label>
+                </div>
+                <div class = "col-md-4">
+                    <input type="text" class = "form-control form-control-lg min" placeholder="Min Level" name = "MinLevel" id = "MinLevel">
+                </div>
+            </div>
+
+            
+
+            <div class = "form-group row mb-2">
+                <div class = "col-md-2">
+                    <label for="">AreaCode :</label>
+                </div>
+                <div class = "col-md-4">
+                    <select class = "form-control form-control-lg mb-2" name = "AreaCode" id = "AreaCode">
+                        <option value="">please select an option</option>
+                        <option value="NYC">213</option>
+                        <option value="AUS">214</option>
+                        <option value="TX">215</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class = "row mt-3">
+                <div class = "col-md-12">
+                    <input type="submit" class = "btn btn-primary mb-5" value = "validate" id = "valid">
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        // var Max = $('#MaxLevel').val();
+        // var Min = $('#MinLevel').val();
+        var regex = /^\d*[.]?\d*$/; 
+
+        $(".max").change(function () {
+            // alert($("#MaxLevel").val());
+            var Max = $("#MaxLevel").val();
+            var Min = $("#MinLevel").val();
+            // alert(Max);
+            // alert(Min);
+            if ($("#MaxLevel").val() === "" || $("MinLevel").val() === ""){
+                alert("please provide some value")
+                $("#MaxLevel").css("border", function() {
+                    return "5px solid white";
+                })
+            }
+
+            // else if (!regex.test($("#MaxLevel").val())){
+            //     // $("#MaxLevel").after("<span>Please Enter Numers only</span>")
+            //     alert("Please enter numbers only");
+            // }
+            else if (parseInt(Max) < parseInt(Min)){
+                $("#MaxLevel").css("border", function(){
+                    return '5px solid red';
+                })
+            }   
+            else{
+                $("#MaxLevel").css("border", function(){
+                    return '5px solid green';
+                })
+            }
+
+        })
+        $(".min").change(function (){
+            // alert($("#MinLevel").val());
+
+            var Max = $("#MaxLevel").val();
+            var Min = $("#MinLevel").val();
+            // alert(Max);
+            // alert(Min);
+            if ($("#MaxLevel").val() === "" || $("#MinLevel").val() === ""){
+                alert("please provide some value");
+            }
+            // else if (!regex.test($("#MaxLevel").val())){
+            //     // $("#MaxLevel").after("<span>Please Enter Numers only</span>")
+            //     alert("Please enter numbers only");
+            // }
+            else if (parseInt(Max) < parseInt(Min)){
+                $("#MaxLevel").css("border", function(){
+                    return '5px solid red';
+                })
+            }
+            else{
+                $("#MaxLevel").css("border", function(){
+                    return '5px solid green';
+                })
+            }
+        })
+
+    </script>
+    <script src = "script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     
-            ProcTimeMin : {
-                required: true
-            },
-    
-            ExternalCode : {
-                required: true
-            },
-    
-            ItemDetais : {
-                required: true
-            },
-    
-            txtdays : {
-                required: true
-            },
-    
-           txtbalance : {
-                required: true
-            },
-    
-            AreaCode : {
-                required: true
-            },
-        },
-        messages : {
-            PurchaseRate : "This Field is required",
-            ProcTimeMin : "This Field is required",
-            ExternalCode : "This Field is required",
-            ItemDetais : "This Field is required",
-            txtdays : "This Field is required",
-            txtbalance : "This Field is required",
-            AreaCode  : "Please select an option from the list",
-        },
-        submitHandler: function(form) {
-            form.submit(alert("Thanks!"))
-        }
-    })
-    })
-    
-    </script> -->
-    <script src="script.js"></script>
-  </body>
+</body>
 </html>
